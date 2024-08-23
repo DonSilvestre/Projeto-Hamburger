@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+p{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    text-shadow:   0px -5px 5px  rgb(46, 45, 45);
+}
+body{
+    background-image: -webkit-radial-gradient(
+        center,
+        purple,
+        black
+    );
+    color: aliceblue;
+}
+.flex{
+    display: flex;
+}
+.container{
+    background-color: rgb(0, 0, 0);
+    width: 99vw;
+    height: 89vh;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-image: url(pexels-jonathanborba-2983101.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 13px;
+}
+.inputCli{
+    width: 45vw;
+    height: 5vw;
+    background-color: blueviolet;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn button{
+    width: 15w;
+    height: 2vw;
+    padding: 3px;
+    font-size: 1vw;
+    text-align: center;
+}
+pre{
+    background-color: rgb(3, 3, 3);
+    color: aliceblue;
+    font-size: 1.5vw;
+    margin: 13px;
+    text-align: center;
+    width:auto ;
+    justify-content: space-around;
+    border-radius: 13px;
+    padding: 13px;
+    border: solid purple 3px;
+    box-shadow: 0px 0px 22px  purple;
+    opacity: 95%;
+
+}
+.content{
+    background-image:-webkit-linear-gradient(
+        180deg,
+        purple,
+        black,
+        violet,
+        black,
+        purple,
+        black,
+        violet,
+        black,
+        purple,
+        black
+    );
+    background-size: 400%;
+    color: aliceblue;
+    font-size: 1.5vw;
+    width: 55vw;
+    height: 25.5vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    animation: borda 37s infinite linear alternate, appear 1s linear;
+    border-radius: 7%;
+    opacity: 95%;
+
+}
+@keyframes borda {
+        0%{
+            background-position: 200%;
+        }
+        50%{
+            background-position: 0;
+        }
+        100%{
+            background-position: 200%;
+        }
+}
+@keyframes appear1 {
+    0%{
+        opacity: 0;
+        width: 0;
+        filter: blur(144px);
+    }
+    100%{
+        opacity: 1;
+        width: 10vw;
+    }
+}
+@keyframes appear {
+        0%{
+            width: 0;
+            opacity: 0;
+            filter: blur(144px);
+        }
+        100%{
+            width: 55vw;
+
+        }
+}
+form{
+    background-color:rgb(4, 4, 4);
+    width: 74.5vw;
+    height: 25vw;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 1px;
+    border-radius: 1%;
+    border: 1px solid purple;
+    flex-direction: column;
+    position: relative;
+ 
+}
+
+form input{
+    height: 1.7vw;
+    width: 25vw;
+    border-radius: 13px;
+    padding: 13px;
+    outline: none;
+    box-shadow: 0px 0px 22px  purple;
+    text-align: center;
+    border: none;
+}
+.input{
+    width: 9vw;
+    height: 2vw;
+    color: aliceblue;
+    font-size: 1vw;
+    text-align: center;
+    align-items: center;
+    padding: 3px;
+    background-color: black;
+    outline: none;
+    border-left: 3px solid purple;
+    border-right: 3px purple solid;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 22px  purple;
+    border-bottom: none;
+    border-top: none;
+    transition: .5s;
+
+}
+.input:hover{
+    width: calc(9vw + 5px);
+    transition: .5s;
+}
+.burger-img{
+    position: absolute;
+    left: 80%;
+    top: 1%;
+    height: 7vw;
+    animation: flutuar 3s infinite alternate ease-in-out;
+
+}
+
+@keyframes flutuar {
+    0%{
+        transform: translateY(0);
+        transform: skew(-4deg);
+        transition: 0.5s;
+    }
+    50%{
+        transform: translateY(9px);
+        transition: 0.5s;
+
+    }
+    100%{
+        transform: translateY(0);
+        transform: skew(4deg);
+        transition: 0.5s;
+
+    }
+}
+
+.content-lista{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;   
+    margin: auto;
+    background-color: black;
+    border-radius: 13px;
+    padding: 13px;
+    opacity: 95%;
+    border: solid purple 1px;
+    font-size: 1vw;
+    animation: appear1 1s linear;
+}
+@media (max-width: 680px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .content{
+        height: 35vw;
+        width: 89vw;
+    }
+
+    form{
+        height: 34.5vw;
+        width: 89vw;
+        font-size: 3vw;
+    }
+  input{
+    width: 55vw;
+    font-size: 1.5vw;
+  }
+  .required{
+    width: 45vw;
+  }
+    .input{
+        height: 5vw;
+        width: 17vw;
+        font-size: 1.5vw;
+    }
+    .input:hover{
+        height: 5vw;
+        width: 17.5vw;
+        font-size: 1.5vw;
+    }
+}
